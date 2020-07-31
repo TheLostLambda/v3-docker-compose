@@ -62,18 +62,18 @@ services:
     volumes:
       - ../tooling-invoker:/usr/src/app
 
-  csharp-test-runner-base:
-    image: exercism/csharp-test-runner-base
+  common-lisp-test-runner-base:
+    image: exercism/common-lisp-test-runner-base
     build:
-      context: ../csharp-test-runner
+      context: ../common-lisp-test-runner
       dockerfile: Dockerfile
 
-  csharp-test-runner:
+  common-lisp-test-runner:
     build:
       context: ./tooling
-      dockerfile: Dockerfile.csharp-test-runner.dev
+      dockerfile: Dockerfile.common-lisp-test-runner.dev
     depends_on:
-      - csharp-test-runner-base
+      - common-lisp-test-runner-base
 
   adminer:
     image: adminer:4.7.7-standalone

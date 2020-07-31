@@ -1,4 +1,4 @@
-FROM exercism/csharp-test-runner-base
+FROM exercism/common-lisp-test-runner-base
 
 # Install Ruby
 RUN apk add build-base ruby ruby-dev 
